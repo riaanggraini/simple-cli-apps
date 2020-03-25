@@ -1,0 +1,20 @@
+{
+  "name": "codemitest",
+  "version": "1.0.0",
+  "description": "test codemi",
+  "main": "index.js",
+  "scripts": {
+    "test": "./test.js"
+  },
+  "author": "ria anggraini",
+  "license": "ISC",
+  "bin": {
+    "init": "src/logic/init.js",
+    "input": "src/logic/input.js",
+    "status": "src/logic/status.js",
+    "leave_": "src/logic/leave.js",
+    "finds": "src/logic/find.js",
+    "search": "src/logic/search.js",
+    "exits": "src/logic/exit.js"
+  }
+}
