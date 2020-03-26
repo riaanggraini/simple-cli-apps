@@ -11,10 +11,10 @@ data.lokerData.map((el) => {
     if (el.lockerNumber) numberLocker.push(el.lockerNumber)
 })
 
-const inputLoker = utility.asyncAwaitWrapper(async() => {
+const inputLoker = utility.asyncAwaitWrapper(async(args) => {
     // gettin value
-    const idType = process.argv[2];
-    const idNumber = process.argv[3];
+    const idType = args[2];
+    const idNumber = args[3];
 
     const checkEmptyLoker = utility.findMissingNumbers(numberLocker)
 

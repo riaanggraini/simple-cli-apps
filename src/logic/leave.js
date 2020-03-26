@@ -5,9 +5,9 @@ const data = require('../../data.json')
 const utility = require('../helpers/utility')
 const validate = require('../helpers/validate')
 
-const leaveLoker = utility.asyncAwaitWrapper(async() => {
+const leaveLoker = utility.asyncAwaitWrapper(async(args) => {
     // define value
-    const value = process.argv[2];
+    const value = args[2];
 
     const deletedLoker = data.lokerData.filter((el) => el.lockerNumber === parseInt(value));
     if (deletedLoker.length === 0) throw new Error(`Loker Tidak Ditemukan !`)

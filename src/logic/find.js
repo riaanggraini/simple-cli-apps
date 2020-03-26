@@ -5,9 +5,9 @@ const data = require('../../data.json')
 const utility = require('../helpers/utility')
 const validate = require('../helpers/validate')
 
-const findLoker = utility.asyncAwaitWrapper(async() => {
+const findLoker = utility.asyncAwaitWrapper(async(args) => {
     // define value
-    const value = process.argv[2];
+    const value = args[2];
 
     // validate id type the value is empty or wrong format
     if (!value || !validate.isNumber(value)) {

@@ -4,7 +4,7 @@
   "description": "test codemi",
   "main": "index.js",
   "scripts": {
-    "test": "./test.js"
+    "test":  "jest --ci --verbose --forceExit --noStackTrace --silent --errorOnDeprecated --no-cache --detectOpenHandles"
   },
   "author": "ria anggraini",
   "license": "ISC",

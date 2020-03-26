@@ -5,10 +5,10 @@ const validate = require('../helpers/validate')
 const data = require('../../data.json')
 const utility = require('../helpers/utility')
 
-const initLoker = utility.asyncAwaitWrapper(async() => {
+const initLoker = utility.asyncAwaitWrapper(async(args) => {
     // gettin value
-    const value = process.argv[2];
-
+    const value = args[2];
+  
     // validate if loker already inited 
     if (data.numberOfLoker > 0) throw new Error(`Loker telah di buat, silahkan bersihkan terlebih dahulu !`)
 
@@ -25,7 +25,6 @@ const initLoker = utility.asyncAwaitWrapper(async() => {
     utility.updateValue({
         "numberOfLoker": value
     })
-
     return console.log(color.FgGreen, `Berhasil membuat loker dengan jumlah ${data.numberOfLoker}`)
 })
 
